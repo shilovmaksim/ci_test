@@ -14,15 +14,6 @@ jobs:
         run: |
           echo "***** GOING TO RUN DOCKER COMPOSE RUN. LOGS ARE EXPECTED BELOW THIS LINE *****"
           docker compose -p ci_test -f docker-compose.test.yml run --name ci_test_output ci_test sh run-tests.sh
-          echo "******************* AFTER DOCKER COMPOSE *******************"
-          echo "*******************"
-          echo "*******************"
-          echo "*******************"
-          echo "*******************"
-          echo "*******************"
-          echo "*******************"
-          echo "********* LOGS THAT SHOULD HAVE BEEN OUTPUT IN PREVIOUS STEP (reading from docker logs): *********"
-          docker logs ci_test_output
 
       - name: Run Specs with docker run
         run: |
